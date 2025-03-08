@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scipy
+tensorflow
+torch
+torchvision
+tqdm
+scikit-learn
+flask
+tflite-runtime  # Required for Google Coral EdgeTPU
+openvino         # Required for Intel NCS2

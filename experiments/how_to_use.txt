@@ -1,0 +1,24 @@
+How to Use These Modules
+Logging Training Progress:
+In your training script, import the logger:
+
+python
+Copy
+from training_logger import TrainingLogger
+logger = TrainingLogger()
+# Inside your epoch loop:
+logger.log_epoch(epoch=1, train_loss=0.345, train_accuracy=0.78, val_loss=0.412, val_accuracy=0.75)
+Saving Models and Metrics:
+In your training/evaluation script, import the saver functions:
+
+python
+Copy
+from experiment_saver import save_model, save_metrics
+
+# After training:
+save_model(model, framework="tensorflow", save_name="har_model_v1")
+
+# After evaluation:
+metrics = {"accuracy": 0.93, "confusion_matrix": [[50, 5], [3, 42]]}
+save_metrics(metrics, file_name="evaluation_metrics.json")
+These two modules encapsulate all experiment tracking (logging and saving) functionality in a simple, easy-to-use manner. You can extend them further as your project evolves.
